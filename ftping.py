@@ -2,7 +2,7 @@ from ftplib import FTP
 
 def login():
     ftp = FTP("ut.sportsontheweb.net")
-    ftp.login(user='2049465', passwd = 'Access01!')
+    ftp.login(user='user', passwd = 'passwd')
     ftp.cwd('ut.sportsontheweb.net')
     filename = ftp.retrlines('LIST')
     #upload()
