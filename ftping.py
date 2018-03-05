@@ -1,8 +1,8 @@
 from ftplib import FTP
 
 def login():
-    ftp = FTP("utttsportsontheweb.net")
-    ftp.login(user='2049465', passwd = 'Access!')
+    ftp = FTP("ut.sportsontheweb.net")
+    ftp.login(user='2049465', passwd = 'Access01!')
     ftp.cwd('ut.sportsontheweb.net')
     filename = ftp.retrlines('LIST')
     #upload()
@@ -24,9 +24,9 @@ def upload():
     print(files)
     ftp.quit()
 
-
-def main():
+if __name__ == '__main__':
     login()
+    download()
+    upload()
 
 
-main()
