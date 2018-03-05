@@ -1,20 +1,19 @@
 import subprocess
 
-def test_connection():
+def jstping():
     
     command0 = "ping"
-    arg_0 = ["-n", "5", "ip"]
+    arg_0 = ["-n", "2", "ut.sportsontheweb.net"]
     command = [command0]
     command.extend(arg_0)
 
     process = (subprocess.call((command), shell=True))
 
     if (process == 0):
-        return("server is up!")
+        return(True)
     else:
-        return("server is down")
+        return("False")
 
-def Main():
-    print(test_connection())
+if __name__ == '__main__':
+    jstping()
 
-Main()
